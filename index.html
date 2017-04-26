@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/myComponent.css">
+	<style type="text/css">
+	body,html{
+		width: 100%;
+		height: 100%;
+	}
+	body{
+		margin: 0px;
+		font-family: 'Microsoft Yahei';
+	}
+	.component_point .rate{
+		display: none;
+	}
+	@keyframes shake{
+		0%{ transform: rotate(0deg); }
+		20%{ transform: rotate(8deg); }
+		40%{ transform: rotate(-5deg); }
+		70%{ transform: rotate(5deg); }
+		100%{ transform: rotate(0deg); }
+	}
+	@keyframes updown{
+		0%{bottom:20px;}
+		50%{bottom:30px; }
+		100%{bottom:20px; }
+	}
+	
+	.component_base_person{
+		transform-origin:center bottom;
+		animation: shake 4s infinite 1s;
+	}
+	.component_base_arrow_load{
+		animation: updown 4s infinite;
+	}
+	.component_base_title{
+		background-size:32px 128px;
+		padding-left:40px;
+		box-sizing: border-box;
+		line-height:32px;
+		color: #b3be00;
+		background-position: 0px 0px;
+		font-size: 21px;
+		top: 10%;
+	}
+	.page_hobbits .component_base_title{
+		background-position: 0px -32px;
+	}
+	.page_experiences .component_base_title{
+		background-position: 0px -64px;
+	}
+	.page_skills .component_base_title{
+		background-position: 0px -96px;
+	}
+	.page_introduce,.page_hobbits,.page_experiences,.page_skills,.page_end{
+		background-image: url("images/con_bg.jpg");
+	}
+	.page_introduce tr{
+		line-height: 40px;
+		vertical-align: top;
+	}
+	canvas{
+		width: 100%;
+		height: 100%;
+	}
+
+	</style>
+	<script type="text/javascript" src="lib/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.fullPage.js"></script>
+</head>
+<body>
+<div class="loading">
+	<div class="process_bar"><div class="process"></div></div>
+	<div class="rate">0%</div>
+</div>
+<script type="text/javascript" src="js/myComponent.js"></script>
+<script type="text/javascript">
+
+//传入对应的样式便可生成页面元素
+	var h5=new H5();
+	h5.addPage('index')
+			.addComponent({
+				type:"canvas",
+				css:{
+				backgroundColor:'#050816'
+					}
+			},'hello')
+			.addComponent({
+				type:"base",
+				width:'228',
+				height:'320',
+				css:{
+					right:'0px',
+					bottom:'16.7%'
+				},
+				bg:'images/plant.png'
+			})
+			.addComponent({
+				type:"base",
+				css:{
+					width: '100%',
+					height: '16.7%',
+					backgroundColor:'#e7e4db',
+					left:'0px',
+					bottom:'0px'
+				}
+			},'platform')
+			.addComponent({
+				type:"base",
+				width:'292',
+				height:'460',
+				css:{
+					left:'20.3%',
+					bottom:'14.3%'
+				},
+				bg:'images/person.png'
+			},'person')
+			.addComponent({
+				type:"base",
+				width:'200',
+				height:'134',
+				css:{
+					right:'4.6%',
+					top:'19%'
+				},
+				bg:'images/name.png'
+			})
+			.addComponent({
+				type:"base",
+				width:'84',
+				height:'36',
+				bg:'images/arrow.png',
+				center:true
+			},"arrow")
+	  .addPage('introduce')
+	  		.addComponent({
+  				width:'550',
+  				height:"64",
+  				center:true,
+  				html:"introduce",
+  				bg:"images/icon.png",
+	  			},"title")
+	  		.addComponent({
+	  			type:"base",
+	  			width:"550",
+	  			center:true,
+	  			css:{
+	  				color:"#eee",
+	  				top:'120%',
+	  				opacity:0
+	  			},
+	  			animateIn:{
+	  				top:'20%',
+	  				opacity:1
+	  			},
+	  			animateOut:{
+	  				top:'120%',
+	  				opacity:0
+	  			},
+	  			html:"<table>"+
+	  				"<tr><td>姓名：</td><td>江榕</td><tr>"+
+	  				"<tr><td>专业：</td><td>计算机多媒体<br>(前端方向)</td><tr>"+
+	  				"<tr><td>出生日期：</td><td>1996-04-09</td><tr>"+
+	  				"<tr><td>手机：</td><td>18420104700</td><tr>"+
+	  				"<tr><td>教育背景</td><td>广东轻工职业技术学院</td><tr>"+
+	  				"<tr><td>求职意向：</td><td>前端</td><tr>"+
+	  				"<tr><td>邮箱：</td><td>2605934892@qq.com</td><tr>"+
+	  				"</table>"
+	  		},"con")
+	  .addPage('hobbits')
+	  		.addComponent({
+  				width:'550',
+  				height:"64",
+  				center:true,
+  				html:"hobbits",
+  				bg:"images/icon.png",
+	  			},"title")	  
+	  		.addComponent({
+	  			type:"point",
+	  			width:"300",
+	  			height:"300",
+	  			css:{
+	  				top:'25%',
+	  				left:'30%'
+	  			},
+	  			data:[['电脑',0.8,'sandybrown'],['画画',0.4,'skyblue','-80%','-30%'],['逛B站',0.4,'salmon','-50%','120%'],['唱歌',0.6,'slateblue','100%','120%'],['旅游',0.6,'violet','80%','-20%'],['睡觉',0.5,'seagreen','10%','180%']]
+	  		})
+	  .addPage('experiences')
+	  		.addComponent({
+  				width:'550',
+  				height:"64",
+  				center:true,
+  				html:"experiences",
+  				bg:"images/icon.png",
+	  			},"title")	  
+	  		.addComponent({
+	  			type:"base",
+	  			width:"550",
+	  			css:{
+	  				color:"#eee",
+	  				left:"-100%",
+	  				lineHeight:"24px",
+	  				top:'20%'
+	  			},
+	  			animateIn:{
+	  				left:"10%"
+	  			},
+	  			animateOut:{
+	  				left:"-100%"
+	  			},
+	  			html:"有人说，大学时光如果你认真走过，就不会遗憾，它短暂而可贵，在那段时光里一直坚持下来的事"
+	  		})
+	  		.addComponent({
+	  			type:"base",
+	  			width:"550",
+	  			css:{
+	  				color:"#eee",
+	  				left:"100%",
+	  				lineHeight:"24px",
+	  				top:'40%'
+	  			},
+	  			animateIn:{
+	  				left:"10%"
+	  			},
+	  			animateOut:{
+	  				left:"100%"
+	  			},
+	  			delay:800,
+	  			html:"每天花一部分时间在学习专业相关知识、技能上，为将来所要从事的职业做准备"
+	  		})
+	  		.addComponent({
+	  			type:"base",
+	  			width:"550",
+	  			css:{
+	  				color:"#eee",
+	  				left:"-100%",
+	  				lineHeight:"24px",
+	  				top:'60%'
+	  			},
+	  			animateIn:{
+	  				left:"10%"
+	  			},
+	  			animateOut:{
+	  				left:"-100%"
+	  			},
+	  			delay:1300,
+	  			html:"课余时间做过很多种形形色色的兼职，不仅解决了生活费的问题，还能接触不同领域的人，让我性格比以前开朗外向很多，学会沟通，提前体会到社会人的生活，更要好好珍惜大学学习时光"
+	  		})	  				  			
+	  .addPage('skills')
+	  		.addComponent({
+  				width:'550',
+  				height:"64",
+  				center:true,
+  				html:"skills",
+  				bg:"images/icon.png",
+	  			},"title")	  
+	  		.addComponent({
+	  			type:"bar",
+	  			width:"620",
+	  			css:{top:'20%'},
+	  			center:true,
+	  			data:[['HTML+CSS',0.9,'salmon'],['JS',0.85,'salmon'],['PS',0.88,'salmon'],['jQuery',0.9,'salmon'],['canvas',0.5,'steelblue'],['php',0.2,'steelblue']]	  			
+	  		})
+	  .addPage('end')
+	  		.addComponent({
+  				width:'550',
+  				height:"180",
+  				center:true,
+  				css:{
+  					bottom:'50%',
+  					color:"#b3be00",
+  					textAlign:"center",
+  					transform:"scale(0)",
+  					transitionDuration:"0.2s"
+  				},
+  				animateIn:{
+  					transform:"scale(1)"
+  				},
+  				animateOut:{
+  					transform:"scale(0)"
+  				},	
+  				html:"<span style='font-size:30px;line-height:60px;'>谢谢观看</span><br><span>by江榕"
+	  			})	  
+	  		.addComponent({
+	  			type:"base",
+	  			width:"250",
+	  			height:"80",
+	  			css:{
+	  				bottom:'20%',
+	  				border:'1px solid #b3be00',
+	  				color:"#b3be00",
+	  				textAlign:"center",
+	  				lineHeight:"40px",
+	  				borderRadius:"4px",
+	  				opacity:0
+	  			},
+  				animateIn:{
+  					opacity:1
+  				},
+  				animateOut:{
+  					opacity:0
+  				},	
+  				delay:400,  			
+	  			center:true,
+	  			html:"返回首页",
+	  			onclick:function () {
+	  				$.fn.fullpage.moveTo(1)
+	  			}	  			
+	  		})		  				  		  
+	  .loader(["images/person.png","images/plant.png","images/name.png","images/arrow.png","images/con_bg.jpg"]).canvasAnimate('hello')
+
+</script>
+</body>
