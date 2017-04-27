@@ -22,6 +22,18 @@
 	.component_point .rate{
 		display: none;
 	}
+	@-webkit-keyframes shake{
+		0%{ -webkit-transform: rotate(0deg); }
+		20%{ -webkit-transform: rotate(8deg); }
+		40%{-webkit- transform: rotate(-5deg); }
+		70%{ -webkit-transform: rotate(5deg); }
+		100%{ -webkit-transform: rotate(0deg); }
+	}
+	@-webkit-keyframes updown{
+		0%{bottom:20px;}
+		50%{bottom:30px; }
+		100%{bottom:20px; }
+	}		
 	@keyframes shake{
 		0%{ transform: rotate(0deg); }
 		20%{ transform: rotate(8deg); }
@@ -36,9 +48,11 @@
 	}
 	.component_base_person{
 		transform-origin:center bottom;
+		-webkit-animation: shake 4s infinite 1s;
 		animation: shake 4s infinite 1s;
 	}
 	.component_base_arrow_load{
+		-webkit-animation: updown 1s infinite;
 		animation: updown 1s infinite;
 	}
 
@@ -139,6 +153,7 @@
 				type:"base",
 				width:'84',
 				height:'36',
+				css:{bottom:"20px"},
 				bg:'images/arrow.png',
 				center:true
 			},"arrow")
@@ -178,18 +193,15 @@
 	  			center:true,
 	  			css:{
 	  				color:"#eee",
-	  				top:'120%',
-	  				opacity:0
+	  				top:'120%'
 	  			},
 	  			animateIn:{
-	  				top:'20%',
-	  				opacity:1
+	  				top:'20%'
 	  			},
 	  			animateOut:{
-	  				top:'120%',
-	  				opacity:0
+	  				top:'120%'
 	  			},
-	  			delay:500,
+	  			delay:400,
 	  			html:"<table>"+
 	  				"<tr><td>姓名：</td><td>江榕</td></tr>"+
 	  				"<tr><td>专业：</td><td>计算机多媒体<br>(前端方向)</td></tr>"+
