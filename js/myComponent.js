@@ -32,10 +32,10 @@
 			})
 
 			component.on('onLeave',function(){
-				setTimeout(function () {
+				// setTimeout(function () {
 				component.addClass(cls+"_leave").removeClass(cls+"_load")
 				cfg.animateOut&&component.css(cfg.animateOut)
-				},cfg.delay||0)
+				// },cfg.delay||0)
 				return false;
 			})		
 			return component;

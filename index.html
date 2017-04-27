@@ -5,7 +5,10 @@
 	<title>hello,world</title>
 	<meta name="description" content="老江的简历">
 	<meta name="keywords" content="江榕,个人主页,简历">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
 	<link rel="stylesheet" type="text/css" href="css/myComponent.css">
 	<style type="text/css">
 	body,html{
@@ -31,14 +34,14 @@
 		50%{bottom:30px; }
 		100%{bottom:20px; }
 	}
-	
 	.component_base_person{
 		transform-origin:center bottom;
 		animation: shake 4s infinite 1s;
 	}
 	.component_base_arrow_load{
-		animation: updown 4s infinite;
+		animation: updown 1s infinite;
 	}
+
 	.component_base_title{
 		background-size:32px 128px;
 		padding-left:40px;
@@ -58,11 +61,11 @@
 	.page_skills .component_base_title{
 		background-position: 0px -96px;
 	}
-	.page_introduce,.page_hobbits,.page_experiences,.page_skills,.page_end{
+	.page_introduce,.page_hobbits,.page_a_emoji,.page_experiences,.page_skills,.page_end{
 		background-image: url("images/con_bg.jpg");
 	}
 	.page_introduce tr{
-		line-height: 40px;
+		line-height: 35px;
 		vertical-align: top;
 	}
 	canvas{
@@ -148,6 +151,28 @@
   				bg:"images/icon.png",
 	  			},"title")
 	  		.addComponent({
+  				width:'370',
+  				height:"354",
+  				center:true,
+  				css:{
+  					transform: "rotate(0deg) scale(1)",
+  					top: "30%",
+  					left: "50%",
+  					transition:"all 0.5s 1s"
+  				},
+  				animateIn:{
+  					transform:" rotate(380deg) scale(0.2)",
+  					top: "-20%",
+  					left:"115%"
+  				},
+   				animateOut:{
+  					transform: "rotate(0deg) scale(1)",
+  					top: "30%",
+  					left:"50%",
+  				}, 				
+  				bg:"images/emoji1.jpg",
+	  			},"emoji1")	  		
+	  		.addComponent({
 	  			type:"base",
 	  			width:"550",
 	  			center:true,
@@ -164,14 +189,16 @@
 	  				top:'120%',
 	  				opacity:0
 	  			},
+	  			delay:500,
 	  			html:"<table>"+
-	  				"<tr><td>姓名：</td><td>江榕</td><tr>"+
-	  				"<tr><td>专业：</td><td>计算机多媒体<br>(前端方向)</td><tr>"+
-	  				"<tr><td>出生日期：</td><td>1996-04-09</td><tr>"+
-	  				"<tr><td>手机：</td><td>18420104700</td><tr>"+
-	  				"<tr><td>教育背景</td><td>广东轻工职业技术学院</td><tr>"+
-	  				"<tr><td>求职意向：</td><td>前端</td><tr>"+
-	  				"<tr><td>邮箱：</td><td>2605934892@qq.com</td><tr>"+
+	  				"<tr><td>姓名：</td><td>江榕</td></tr>"+
+	  				"<tr><td>专业：</td><td>计算机多媒体<br>(前端方向)</td></tr>"+
+	  				"<tr><td>英语能力：</td><td>英语四级</td></tr>"+
+	  				"<tr><td>出生日期：</td><td>1996-04-09</td></tr>"+
+	  				"<tr><td>手机：</td><td>18420104700</td></tr>"+
+	  				"<tr><td>教育背景</td><td>广东轻工职业技术学院</td></tr>"+
+	  				"<tr><td>求职意向：</td><td>前端</td></tr>"+
+	  				"<tr><td>邮箱：</td><td>2605934892@qq.com</td></tr>"+
 	  				"</table>"
 	  		},"con")
 	  .addPage('hobbits')
@@ -192,12 +219,23 @@
 	  			},
 	  			data:[['电脑',0.8,'sandybrown'],['画画',0.4,'skyblue','-80%','-30%'],['逛B站',0.4,'salmon','-50%','120%'],['唱歌',0.6,'slateblue','100%','120%'],['旅游',0.6,'violet','80%','-20%'],['睡觉',0.5,'seagreen','10%','180%']]
 	  		})
+	  .addPage('a_emoji')
+	  		.addComponent({
+  				width:'480',
+  				height:"428",
+  				center:true,
+  				css:{
+  					top:"50%",
+  					marginTop:"-107px"
+  				},
+  				bg:"images/emoji2.jpg",
+	  			})	  		
 	  .addPage('experiences')
 	  		.addComponent({
   				width:'550',
   				height:"64",
   				center:true,
-  				html:"experiences",
+  				html:"college life",
   				bg:"images/icon.png",
 	  			},"title")	  
 	  		.addComponent({
@@ -215,7 +253,7 @@
 	  			animateOut:{
 	  				left:"-100%"
 	  			},
-	  			html:"有人说，大学时光如果你认真走过，就不会遗憾，它短暂而可贵，在那段时光里一直坚持下来的事"
+	  			html:"有人说，大学时光如果你认真走过，就不会遗憾，它短暂而可贵"
 	  		})
 	  		.addComponent({
 	  			type:"base",
@@ -224,7 +262,7 @@
 	  				color:"#eee",
 	  				left:"100%",
 	  				lineHeight:"24px",
-	  				top:'40%'
+	  				top:'35%'
 	  			},
 	  			animateIn:{
 	  				left:"10%"
@@ -232,8 +270,8 @@
 	  			animateOut:{
 	  				left:"100%"
 	  			},
-	  			delay:800,
-	  			html:"每天花一部分时间在学习专业相关知识、技能上，为将来所要从事的职业做准备"
+	  			delay:200,
+	  			html:"评选为班级积极分子，在校专业学科成绩优秀，每天将课外留部分时间自学专业相关知识、技能上，为将来所要从事的职业做准备"
 	  		})
 	  		.addComponent({
 	  			type:"base",
@@ -242,7 +280,8 @@
 	  				color:"#eee",
 	  				left:"-100%",
 	  				lineHeight:"24px",
-	  				top:'60%'
+	  				top:'60%',
+	  				transitionDuration:"0.4s"
 	  			},
 	  			animateIn:{
 	  				left:"10%"
@@ -250,8 +289,8 @@
 	  			animateOut:{
 	  				left:"-100%"
 	  			},
-	  			delay:1300,
-	  			html:"课余时间做过很多种形形色色的兼职，不仅解决了生活费的问题，还能接触不同领域的人，让我性格比以前开朗外向很多，学会沟通，提前体会到社会人的生活，更要好好珍惜大学学习时光"
+	  			delay:700,
+	  			html:"课余时间做过形形色色的兼职，不仅解决了生活费的问题，还能接触不同领域的人，让我性格比以前开朗外向很多，学会沟通，提前体会到社会人的生活，更要好好珍惜大学学习时光"
 	  		})	  				  			
 	  .addPage('skills')
 	  		.addComponent({
@@ -264,7 +303,7 @@
 	  		.addComponent({
 	  			type:"bar",
 	  			width:"620",
-	  			css:{top:'20%'},
+	  			css:{top:'25%'},
 	  			center:true,
 	  			data:[['HTML+CSS',0.9,'salmon'],['JS',0.85,'salmon'],['PS',0.88,'salmon'],['jQuery',0.9,'salmon'],['canvas',0.5,'steelblue'],['php',0.2,'steelblue']]	  			
 	  		})
@@ -274,7 +313,7 @@
   				height:"180",
   				center:true,
   				css:{
-  					bottom:'50%',
+  					bottom:'70%',
   					color:"#b3be00",
   					textAlign:"center",
   					transform:"scale(0)",
@@ -286,14 +325,31 @@
   				animateOut:{
   					transform:"scale(0)"
   				},	
-  				html:"<span style='font-size:30px;line-height:60px;'>谢谢观看</span><br><span>by江榕"
-	  			})	  
+  				html:"<span style='font-size:30px;line-height:60px;'>谢谢观看</span>by江榕"
+	  			})	
+	  		.addComponent({
+  				width:'344',
+  				height:"462",
+  				center:true,
+  				bg:"images/emoji3.jpg",
+  				css:{
+  					opacity:0,
+  					bottom:"25%"
+  				},
+  				animateIn:{
+  					opacity:1
+  				},
+  				animateOut:{
+  					opacity:0
+  				},
+  				delay:300
+	  			})		  			  
 	  		.addComponent({
 	  			type:"base",
 	  			width:"250",
 	  			height:"80",
 	  			css:{
-	  				bottom:'20%',
+	  				bottom:'10%',
 	  				border:'1px solid #b3be00',
 	  				color:"#b3be00",
 	  				textAlign:"center",
@@ -307,7 +363,7 @@
   				animateOut:{
   					opacity:0
   				},	
-  				delay:400,  			
+  				delay:900,  			
 	  			center:true,
 	  			html:"返回首页",
 	  			onclick:function () {
