@@ -281,7 +281,6 @@
 				if(this.loaded<this._images){
 					return this}		
 			}
-			
 			$(".loading").hide()
 
 			this.el.fullpage({
