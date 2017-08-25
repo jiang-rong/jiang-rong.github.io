@@ -86,6 +86,15 @@
 		width: 100%;
 		height: 100%;
 	}
+	.department{
+		margin-right:30px;
+	}
+	@media screen  and (max-width: 350px){
+		.page_experiences {
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
 
 	</style>
 	<script type="text/javascript" src="lib/jquery-1.11.2.min.js"></script>
@@ -247,7 +256,7 @@
   				width:'550',
   				height:"64",
   				center:true,
-  				html:"college life",
+  				html:"about work",
   				bg:"images/icon.png",
 	  			},"title")	  
 	  		.addComponent({
@@ -265,7 +274,7 @@
 	  			animateOut:{
 	  				left:"-100%"
 	  			},
-	  			html:"有人说，大学时光如果你认真走过，就不会遗憾，它短暂而可贵"
+	  			html:"2016.10-2017.9<br><span class='department'>技术一部前端</span>合优网络 "
 	  		})
 	  		.addComponent({
 	  			type:"base",
@@ -274,7 +283,7 @@
 	  				color:"#eee",
 	  				left:"100%",
 	  				lineHeight:"24px",
-	  				top:'35%'
+	  				top:'33%'
 	  			},
 	  			animateIn:{
 	  				left:"10%"
@@ -283,7 +292,11 @@
 	  				left:"100%"
 	  			},
 	  			delay:200,
-	  			html:"评选为班级积极分子，在校专业学科成绩优秀，每天将课外留部分时间自学专业相关知识、技能上，为将来所要从事的职业做准备"
+	  			html:"美国宝宝服务网手机版 <br>"+
+	  			"http://php.heyou51.cn/lzl/mjts/wap/"+"<br>"+
+	  			"美国宝宝服务网电脑版 <br>"+
+	  			"http://php.heyou51.cn/lzl/mjts/"+"<br>"+
+	  			"负责所有前端相关，以及价格日历组件开发等，内测中"
 	  		})
 	  		.addComponent({
 	  			type:"base",
@@ -292,7 +305,7 @@
 	  				color:"#eee",
 	  				left:"-100%",
 	  				lineHeight:"24px",
-	  				top:'60%',
+	  				top:'64%',
 	  				transitionDuration:"0.4s"
 	  			},
 	  			animateIn:{
@@ -302,7 +315,7 @@
 	  				left:"-100%"
 	  			},
 	  			delay:700,
-	  			html:"课余时间做过形形色色的兼职，不仅解决了生活费的问题，还能接触不同领域的人，让我性格比以前开朗外向很多，学会沟通，提前体会到社会人的生活，更要好好珍惜大学学习时光"
+	  			html:"仓谷景观设计有限公司(pc站) http://www.canggula.com/"+"<br>已上线, 所有前端页面与交互"
 	  		})	  				  			
 	  .addPage('skills')
 	  		.addComponent({
@@ -317,7 +330,7 @@
 	  			width:"620",
 	  			css:{top:'22%'},
 	  			center:true,
-	  			data:[['HTML+CSS',0.9,'salmon'],['JS',0.85,'salmon'],['PS',0.88,'salmon'],['jQuery',0.9,'salmon'],['canvas',0.6,'steelblue'],['vue.js',0.5,'steelblue'],['php',0.4,'steelblue']]	  			
+	  			data:[['HTML+CSS',0.9,'salmon'],['JS',0.85,'salmon'],['PS',0.88,'salmon'],['jQuery',0.9,'salmon'],['canvas',0.7,'steelblue'],['vue.js',0.5,'steelblue'],['php',0.4,'steelblue']]	  			
 	  		}) 		
 	  .addPage('end')
 	  		.addComponent({
