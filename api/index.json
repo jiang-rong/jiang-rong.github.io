@@ -1,0 +1,80 @@
+{
+	"flag": true,
+	"data": {
+		"city": "北京",
+		"swiperList": [{
+			"imgUrl": "static/img/15047728744306.png",
+			"id": "20202"
+		}, {
+			"imgUrl": "static/img/15029510678667.jpg",
+			"id": "111"
+		},{
+			"imgUrl": "static/img/15167812897330.png",
+			"id": "202"
+		},{
+			"imgUrl": "static/img/15041493052883.jpg",
+			"id": "12"
+		}],
+		"iconList": [{
+			"hrefUrl": "/Goods",
+			"imgUrl": "static/img/15076063516612.png",
+			"title": "虚拟商城"
+		}, {
+			"hrefUrl": "/Rent",
+			"imgUrl": "static/img/15027806136097.png",
+			"title": "游戏租号"
+		}, {
+			"hrefUrl": "/Article?id=004",
+			"imgUrl": "static/img/15027806185520.png",
+			"title": "分站50元"
+		}, {
+			"hrefUrl": "/Article?id=001",
+			"imgUrl": "static/img/15163977412906.png",
+			"title": "新手入门"
+		}],
+		"noticeList":[
+			{
+				"title":"\"彩虹六号 围攻\"全新限时活动公布",
+				"time":"2019-3-25",
+				"id":"003"
+			},
+			{
+				"title":"如何租赁商品",
+				"time":"2018-12-30",
+				"id":"002"
+			},
+			{
+				"title":"新手必读",
+				"time":"2018-7-16",
+				"id":"001"
+			}
+		],
+		"recommend":[
+			{
+				"imgUrl":"static/img/goods/15131466582085.jpg",
+				"title":"影视会员，黄金爱奇艺包月仅12元，手机号密码登录，电影综艺一应俱全，价格低",
+				"id":"fs565626266"
+			},
+			{
+				"imgUrl":"static/img/goods/15030743887557.png",
+				"title":"火山小视频粉丝数，网络营销推广 50元1000个",
+				"id":"fs8989201323"
+			},
+			{
+				"imgUrl":"static/img/goods/15076063516612.png",
+				"title":"QQ超级会员 SVIP,稳定,未到期失效全额退款",
+				"id":"fs260557896"
+			},
+			{
+				"imgUrl":"static/img/goods/15101107881232.png",
+				"title":"cf永久装备武器出售",
+				"id":"fs030354992"
+			},
+			{
+				"imgUrl":"static/img/goods/15151179689439.png",
+				"title":"qq名片赞,点赞数量,24小时内必到账,欢迎下单测试!",
+				"id":"fs26265656"
+			}
+		]
+	}
+}

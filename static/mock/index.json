@@ -1,0 +1,40 @@
+{
+	"flag": true,
+	"data": {
+		"city": "北京",
+		"swiperList": [{
+			"imgUrl": "static/img/15047728744306.png",
+			"id": "20202"
+		}, {
+			"imgUrl": "http://hbimg.b0.upaiyun.com/87bba487f583ccaf6e1b0820b5ec286dbe521ac5369ab-CXyAhT_fw658",
+			"id": "111"
+		},{
+			"imgUrl": "https://img1.qunarzz.com/order/comp/1805/2e/6e407f088bfb902.png",
+			"id": "202"
+		}, {
+			"imgUrl": "static/img/15047728744306.png",
+			"id": "12"
+		}],
+		"iconList": [{
+			"hrefUrl": "http://www.baidu.com",
+			"imgUrl": "https://img20.360buyimg.com/img/jfs/t1/661/19/14908/141521/5bdc1c29Ecdd5579c/31466df4894292b8.gif",
+			"title": "栏目1"
+		}, {
+			"hrefUrl": "http://www.baidu.com",
+			"imgUrl": "https://img30.360buyimg.com/img/jfs/t25732/9/2451251696/5793/65eb2b9c/5be6399aN16855d69.png",
+			"title": "热门景点"
+		}, {
+			"hrefUrl": "http://www.baidu.com",
+			"imgUrl": "https://img30.360buyimg.com/img/jfs/t25732/9/2451251696/5793/65eb2b9c/5be6399aN16855d69.png",
+			"title": "栏目2"
+		}, {
+			"hrefUrl": "http://www.baidu.com",
+			"imgUrl": "https://img30.360buyimg.com/img/jfs/t25732/9/2451251696/5793/65eb2b9c/5be6399aN16855d69.png",
+			"title": "栏目3"
+		}, {
+			"hrefUrl": "http://www.baidu.com",
+			"imgUrl": "https://img30.360buyimg.com/img/jfs/t25732/9/2451251696/5793/65eb2b9c/5be6399aN16855d69.png",
+			"title": "栏目10"
+		}]
+	}
+}
