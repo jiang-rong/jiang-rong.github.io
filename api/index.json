@@ -1,7 +1,6 @@
 {
 	"flag": true,
 	"data": {
-		"city": "北京",
 		"swiperList": [{
 			"imgUrl": "static/img/15047728744306.png",
 			"id": "20202"
