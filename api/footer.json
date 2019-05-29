@@ -12,7 +12,13 @@
 			"path":"/Rent",
 			"text":"租号",
 			"icon":"#icon-rent-radius"
-		},{
+		}
+		,{
+			"path":"/Cart",
+			"text":"购物车",
+			"icon":"#icon-cart-2"
+		}
+		,{
 			"path":"/User",
 			"text":"我的",
 			"icon":"#icon-user-fill"

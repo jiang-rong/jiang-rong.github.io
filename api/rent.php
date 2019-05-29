@@ -1,6 +1,16 @@
 <?php
-echo $_POST['name'];
-echo $_POST['age'];
+$a=$GLOBALS['HTTP_RAW_POST_DATA'];
+echo $a;
+
+// echo $_POST['name'];
+// echo $_POST['age'];
+// header("Access-Control-Allow-Methods:DELETE,GET,PUT,POST");
+// $file=$_FILES['img']['tmp_name'];
+// foreach ($file as $key => $value) {
+// 	echo $_FILES['img']['name'][$key];
+// 	echo $value;
+// 	file_put_contents($_FILES['img']['name'][$key], file_get_contents($value));
+// }
 // header("Content-Type:text/html;charset=utf-8");
 // $page=$_GET['page'];
 // $arr=json_decode('[{
