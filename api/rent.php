@@ -1,4 +1,5 @@
 <?php
+
 $a=$GLOBALS['HTTP_RAW_POST_DATA'];
 echo $a;
 
